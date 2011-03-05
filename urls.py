@@ -7,6 +7,11 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
     # Example:
     # (r'^mysite/', include('mysite.foo.urls')),
+    
+    (r'^polls/$', 'polls.views.index'),
+    (r'^polls/(\d+)/$', 'polls.views.detail'),
+    (r'^polls/(\d+)/results/$','polls.views.results'),
+    (r'^polls/(\d+)/vote/$', 'polls.views.vote'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
